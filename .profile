@@ -30,7 +30,6 @@ alias sysupdate="sudo pacman -Syu"
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 alias pacman-install="sudo pacman -S "
-alias yay=paru
 alias myip4="curl myip.wtf -4"
 alias myip6="curl myip.wtf -6"
 
