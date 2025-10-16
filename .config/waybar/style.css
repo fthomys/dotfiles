@@ -24,6 +24,7 @@ window#waybar {
   background: transparent;
   border: none;
   transition: all 0.2s ease;
+  margin-right: 10px;
 }
 
 #workspaces button.visible {
@@ -34,8 +35,10 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background: transparent;
   color: #89b4fa;
+  border-bottom: 2px solid #89b4fa;
+  background: transparent;
+  padding-top: 2px;
 }
 
 #workspaces button.urgent {
