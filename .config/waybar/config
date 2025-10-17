@@ -47,7 +47,9 @@
     "format-wifi": "  {essid} ({signalStrength}%)",
     "format-ethernet": "  {ipaddr}",
     "format-disconnected": " No network",
-    "tooltip": true
+    "tooltip": true,
+    "tooltip-format": "IP: {ipaddr}/{cidr} \nNetmask: {netmask} \nGateway: {gwaddr}"
+    
   },
 
   "battery": {
