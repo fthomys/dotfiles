@@ -1,0 +1,27 @@
+[window]
+decorations = "none"
+dynamic_padding = true
+opacity = 0.95
+
+[window.padding]
+x = 12
+y = 12
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 10
+
+[font.normal]
+family = "MonaspiceNe Nerd Font Mono"
+style = "Medium"
+
+[cursor]
+blink_interval = 700
+unfocused_hollow = true
+thickness = 0.15
+
+[cursor.style]
+shape = "Block"
+blinking = "On"

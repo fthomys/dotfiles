@@ -1,0 +1,140 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+  "margin-top": 6,
+  "margin-left": 8,
+  "margin-right": 8,
+  "modules-left": [
+    "hyprland/workspaces",
+    "clock",
+    "cpu",
+    "memory",
+    "memory#swap",
+    "mpris"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "temperature",
+    "pulseaudio",
+    "network",
+    "battery",
+    "tray"
+  ],
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "all-outputs": true,
+    "disable-scroll": true,
+    "sort-by-number": true
+  },
+  "clock": {
+    "format": "  {:%a, %b %d  %H:%M}",
+    "tooltip-format": "{:%A, %B %d %Y}\nWeek %V",
+    "interval": 5
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 60,
+    "separate-outputs": true
+  },
+  "cpu": {
+    "interval": 2,
+    "format": " {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "interval": 2,
+    "format": "󰍛 {percentage}%",
+    "tooltip-format": "RAM {used:0.1f}G / {total:0.1f}G"
+  },
+  "memory#swap": {
+    "interval": 2,
+    "format": "󰓡 {swapPercentage}%",
+    "tooltip-format": "Swap {swapUsed:0.1f}G / {swapTotal:0.1f}G"
+  },
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} {dynamic}",
+    "player-icons": {
+      "default": "",
+      "spotify": "",
+      "firefox": "",
+      "chromium": ""
+    },
+    "status-icons": {
+      "paused": ""
+    },
+    "dynamic-order": [
+      "title",
+      "artist"
+    ],
+    "dynamic-len": 40,
+    "max-length": 45,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+  "temperature": {
+    "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
+    "input-filename": "temp1_input",
+    "critical-threshold": 85,
+    "interval": 5,
+    "format": "{icon} {temperatureC}°C",
+    "format-critical": "{icon} {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "scroll-step": 2,
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%",
+    "format-icons": {
+      "headphones": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "network": {
+    "format-wifi": "  {essid} ({signalStrength}%)",
+    "format-ethernet": "  {ipaddr}",
+    "format-disconnected": " No network",
+    "tooltip": true,
+    "tooltip-format": "IP: {ipaddr}/{cidr} \nNetmask: {netmask} \nGateway: {gwaddr}"
+  },
+  "battery": {
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "⚡ {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "tooltip-format": "{timeTo}\n{power}W",
+    "format-plugged": "{capacity}% ",
+    "tooltip": true,
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  }
+}
