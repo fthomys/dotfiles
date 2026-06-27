@@ -16,6 +16,7 @@ return {{
         vim.keymap.set('n', '<leader>fT', builtin.filetypes, { desc = 'Telescope filetypes' })
 
         require("telescope").setup(opts)
+        require("telescope").load_extension("fzf")
     end
 
 },    {

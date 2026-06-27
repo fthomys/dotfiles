@@ -22,7 +22,9 @@ vim.o.clipboard = "unnamedplus"
 vim.o.cursorline = true
 vim.o.cursorlineopt = "number"
 
--- Smarter search
+vim.opt.termguicolors = true
+
+vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Always show sign column
