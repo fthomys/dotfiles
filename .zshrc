@@ -6,8 +6,30 @@ HISTSIZE=100000
 SAVEHIST=100000
 setopt autocd notify
 
-plugins=(git kubectl docker)
-
+plugins=(
+  git
+  kubectl
+  docker
+  helm
+  kubectx
+  fzf
+  extract
+  web-search
+  history-substring-search
+  sudo
+  colored-man-pages
+  command-not-found
+  dirhistory
+  copypath
+  copyfile
+  jsontools
+  urltools
+  encode64
+  git-extras
+  forgit
+  common-aliases
+  zsh-completions
+)
 source "$ZSH/oh-my-zsh.sh"
 
 typeset -A ZSH_HIGHLIGHT_STYLES

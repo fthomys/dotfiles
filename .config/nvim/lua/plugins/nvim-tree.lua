@@ -3,6 +3,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     keys = {
         { "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle file explorer" },
+        { "<leader>o", "<cmd>NvimTreeFocus<CR>",  desc = "Focus file explorer" },
     },
     opts = {},
 }
