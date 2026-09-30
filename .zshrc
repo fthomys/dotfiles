@@ -60,15 +60,15 @@ export PATH="$JAVA_HOME/bin:$PATH"
 eval "$(zoxide init --cmd cd zsh)"
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 eval "$(starship init zsh)"
 
 
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
-source $HOME/.local/bin/env
+[[ -f $HOME/.local/bin/env ]] && source $HOME/.local/bin/env
 
 if [[ "${HOST:-$(hostname)}" == "ws-fthomys" ]]; then
 enroll-secureboot() {
@@ -106,7 +106,7 @@ export PATH="/home/fthomys/.local/bin:$PATH"
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
 export DEVKITPPC=/opt/devkitpro/devkitPPC
-source /etc/profile.d/devkit-env.sh
+[[ -f /etc/profile.d/devkit-env.sh ]] && source /etc/profile.d/devkit-env.sh
 
 
 # depot_tools (Chromium)
